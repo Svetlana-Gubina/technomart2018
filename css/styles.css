@@ -2234,6 +2234,83 @@ input[type="radio"]:checked:disabled+label::after {
 	color: #000000;
 	border: 2px solid blue;
 }
+.modal-cart {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -141px;
+	margin-left: -314px;
+	width: 620px;
+	height: 282px;
+	border-top: 7px solid red;
+	border-bottom: 112px solid #f4f4f4;
+	box-sizing: border-box;
+	box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+	text-align: center;
+}
+.product-add {
+	position: relative;
+	margin:0;
+	margin-top:70px;
+	margin-left: 82px;
+	padding: 0;
+	padding-left: 96px;
+	width: 316px;
+    color: #000000;
+    font-family: Cuprum, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.product-add:before {
+	content:"";
+	position: absolute;
+	top:-50%;
+	left:0;
+	width: 66px;
+	height: 66px;
+	background-image: url("../img1/green-round.png");
+}
+.buttons{
+	min-width: 460px;
+	margin: 0 auto;
+	margin-top:103px;
+	padding: 0;
+}
+.button-checkout,
+.button-continue{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.button-checkout{
+	padding: 10px 60px;
+	margin-right: 20px;
+}
+
+.button-continue {
+	padding: 10px 44px;
+	color: #000000;
+    font-family: Cuprum, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	border: none;
+}
+.button-continue:hover,
+.button-continue:focus {
+	color: #ee3643;
+}
+.button-continue:active {
+	opacity: 0.3;
+	color: #000000;
+}
+
+.modal-show {
+    display: block;
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
