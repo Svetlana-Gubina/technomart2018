@@ -286,9 +286,9 @@ input:-moz-placeholder {
 }
 
 .presentation {
-	width: 196px;
+	width: 198px;
 	margin: 0;
-	margin-left: 40px;
+	margin-left: 45px;
 	color: #ee3643;
 	font-family: Cuprum, Arial, sans-serif;
 	font-size: 16px;
@@ -301,7 +301,7 @@ input:-moz-placeholder {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding-top: 40px;
+	padding-top: 50px;
 	padding-bottom: 35px;
 }
 
@@ -361,7 +361,7 @@ input:-moz-placeholder {
 .login-link,
 .check-in-link {
 	display: block;
-	padding: 14px 25px;
+	padding: 12px 25px 10px;
 	background-color: #ffffff;
 	color: #000000;
 	font-family: Cuprum, Arial, sans-serif;
@@ -372,15 +372,21 @@ input:-moz-placeholder {
 
 .login-link {
 	position: relative;
-	padding-top: 12px;
-	padding-bottom: 10px;
 	padding-left: 40px;
 }
-
+.login-links{
+	font-size: 0;
+}
 .login-inner {
+	display: inline-block;
+	vertical-align: baseline;
+	color: #000000;
+	font-family: Cuprum, Arial, sans-serif;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 21px;
 	margin: 0;
 	max-width: 100%;
-	padding-right: 55px;
 }
 
 .login-inner:before {
@@ -398,23 +404,22 @@ input:-moz-placeholder {
 	background-image: url("../img1/icon-user-bright.png");
 	background-repeat: no-repeat;
 }
-
-.login-inner:after {
-	content: "";
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	width: 20px;
-	height: 17px;
-	background-image: url("../img1/icon-login.png");
-	background-repeat: no-repeat;
+.log-out{
+	display: inline-block;
+	vertical-align: baseline;
+	margin: 0;
+	margin-left: 10px;
+	padding: 0;
+	
 }
 
-.login-inner:hover:after {
-	background-image: url("../img1/icon-login-bright.png");
-	background-repeat: no-repeat;
-}
+/*.log-out:hover,
+.log-out:focus{
 
+}
+.log-out:active{
+
+}*/
 .login-index:before {
 	content: "";
 	position: absolute;
@@ -433,8 +438,10 @@ input:-moz-placeholder {
 
 .login-link:hover,
 .check-in-link:hover,
+.login-inner:hover,
 .login-link:focus,
-.check-in-link:focus {
+.check-in-link:focus,
+.login-inner:focus {
 	color: #ee3643;
 }
 
@@ -536,14 +543,14 @@ input:-moz-placeholder {
 }
 
 .main-catalog {
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 
 .main-catalog-item {
+	margin: 0;
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	padding: 25px;
-	margin: 0;
 	width: 300px;
 }
 
@@ -651,6 +658,7 @@ input:-moz-placeholder {
 
 .yellow-second {
 	position: relative;
+	margin-bottom: 20px;
 	float: right;
 	clear: right;
 	background-color: #ffbf47;
@@ -859,9 +867,6 @@ input:-moz-placeholder {
 	list-style: none;
 }
 
-
-/*-------------------------------------------------------------------------*/
-
 .brands-list {
 	margin: 0;
 	padding: 0;
@@ -886,7 +891,14 @@ input:-moz-placeholder {
 	padding-top: 30px;
 	border: 1px solid #f9f5f0;
 }
-
+.brand-item:hover,
+.brand-item:focus {
+	box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+.brand-item:active {
+	box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+	opacity: 0.3;
+}
 .bosch-logo {
 	margin: auto;
 }
@@ -958,6 +970,7 @@ input:-moz-placeholder {
 }
 
 .service-list {
+	position:relative;/*for shadow*/
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -966,6 +979,14 @@ input:-moz-placeholder {
 	margin-bottom: 100px;
 	width: 240px;
 	list-style: none;
+}
+.service-list:after {
+	content: url("../img1/shadow-1.png");
+	position:absolute;
+	top: -35px;
+	right: 0;
+	width: 10px;
+    height: 279px;
 }
 
 .service-item {
@@ -1806,13 +1827,14 @@ input[type="radio"]:checked:disabled+label::after {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-left: -40px;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 
 .pagination-item {
 	min-width: 40px;
 	height: 40px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .pagination-item:last-child {
@@ -1873,21 +1895,24 @@ input[type="radio"]:checked:disabled+label::after {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin: 20px auto;
+	margin: 0 auto;
 }
 
 .inner-page .catalog-items {
 	width: 700px;
 	margin: 20px auto;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	
 }
-
+.cat-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -20px;
+}
 .catalog-item {
 	position: relative;
 	margin: 0;
-	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 10px;
 	box-sizing: border-box;
 	border: 1px solid #e5e5e5;
 	width: 220px;
@@ -1899,16 +1924,9 @@ input[type="radio"]:checked:disabled+label::after {
 	text-align: center;
 }
 
-.home-page .catalog-item:last-child {
-	margin-right: 0;
-}
 
 .inner-page .catalog-item {
 	margin-bottom: 15px;
-}
-
-.inner-page .catalog-item:nth-child(3n) {
-	margin-right: 0;
 }
 
 .discount {
