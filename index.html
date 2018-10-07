@@ -230,7 +230,7 @@
                   <p>Вы можете забрать товар сами,<br>
                      заехав в наш офис.
                   </p>
-                  <a href="#"><img src="img1/map.png" class="map-mini" width="300" height="158" alt="Карта проезда к офису по адресу г.Санкт-Петербург ул.Б.Конюшенная д.19/8"></a>
+                  <a class="link-map" href="#"><img src="img1/map.png" class="map-mini" width="300" height="158" alt="Карта проезда к офису по адресу г.Санкт-Петербург ул.Б.Конюшенная д.19/8"></a>
                   <a class="button-write" href="#">Заблудились? Напишите нам!</a>
                </section>
             </div>
@@ -302,7 +302,7 @@
             </div>
          </div>
       </footer>
-      <div class="modal-overlay"></div>
+      <div class="modal modal-overlay"></div>
       <section class="modal modal-message">
          <h2 class="visually-hidden">Напишите нам</h2>
          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
@@ -325,9 +325,34 @@
       <section class="modal modal-map">
          <h2 class="visually-hidden">Как до нас добраться?</h2>
          <p class="map-container">
+            <iframe class="i-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858715513438!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538919518850" width="943" height="449" style="border:0" allowfullscreen></iframe>
             <img src="img1/map-big.jpg" width="943" height="449" alt="Офис компании по адресу:г.Санкт-Петербург ул.Б.Конюшенная д.19/8">
          </p>
          <button class="modal-close">Закрыть</button>
       </section>
+      
+      <script>
+        var link = document.querySelector(".button-write");
+        var overlay = document.querySelector(".modal-overlay");
+        var popup = document.querySelector(".modal-message");
+        var close = popup.querySelector(".modal-close");
+        var name = popup.querySelector("[name=name]");
+        
+
+        link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        overlay.classList.add("modal-show");
+        name.focus();
+    });
+  
+        close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        overlay.classList.remove("modal-show");
+    });
+       
+       
+      </script>
    </body>
 </html>
