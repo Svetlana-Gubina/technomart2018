@@ -348,8 +348,7 @@ input:-moz-placeholder {
 	padding: 0;
 	list-style: none;
 }
-
-.user-navigation li {
+.home-page .user-navigation li {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -357,7 +356,6 @@ input:-moz-placeholder {
 .login-index {
 	margin-right: 10px;
 }
-
 .login-link,
 .check-in-link {
 	display: block;
@@ -373,9 +371,19 @@ input:-moz-placeholder {
 .login-link {
 	position: relative;
 	padding-left: 40px;
+	
 }
+.inner-page .user-navigation {
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 299px;
+}
+
 .login-links{
-	font-size: 0;
+	width:100%;
+	background-color: #ffffff;
+	
 }
 .login-inner {
 	display: inline-block;
@@ -386,7 +394,13 @@ input:-moz-placeholder {
 	font-weight: 400;
 	line-height: 21px;
 	margin: 0;
-	max-width: 100%;
+	margin-right: 20px;
+	
+	position: relative;
+	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	
 }
 
 .login-inner:before {
@@ -413,15 +427,22 @@ input:-moz-placeholder {
 	
 }
 
-/*.log-out:hover,
+.log-out:hover,
 .log-out:focus{
-
+	filter: invert(100%);
 }
 .log-out:active{
-
-}*/
+	filter: saturate(50%);
+}
+.user-navigation li:nth-child(2) {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.user-navigation li:last-child {
+	margin-right: auto;
+}
 .login-index:before {
-	content: "";
+	content: url("../img1/login.svg");
 	position: absolute;
 	top: 15px;
 	left: 10px;
@@ -1711,8 +1732,8 @@ input[type="radio"]:checked+label::before {
 input[type="radio"]:checked+label::after {
 	content: "";
 	position: absolute;
-	top: 6px;
-	left: -32px;
+	top: 7px;
+	left: -33px;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -2114,6 +2135,7 @@ input[type="radio"]:checked:disabled+label::after {
 }
 
 .modal-overlay {
+	display: none;
 	z-index: 50;
 	position:fixed;
     top:0;
