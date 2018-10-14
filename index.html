@@ -17,7 +17,7 @@
                      <input id="search-field-input" class="search-input" type="text" name="search" placeholder="Поиск">
                   </form>
                   <a class="top-menu-item tab" href="#">Закладки:0</a>
-                  <a class="top-menu-item cart-link" href="#">Корзина:0 </a>
+                  <a class="top-menu-item cart-link" href="#">Корзина:<span class="counter">0</span></a>
                   <a class="top-menu-item submit-order" href="#">Оформить заказ</a>
                </div>
             </div>
@@ -98,7 +98,7 @@
                      <span class="slider-indicator"></span>
                      <span class="slider-indicator  indicator-current"></span> 
                   </div>
-                  <a class="button btn-open" href="#">Открыть каталог</a>
+                  <a class="button btn-open" href="inner.html">Открыть каталог</a>
                </div>
             </section>
          </div>
@@ -184,9 +184,9 @@
                </p>
                <div class="services-flex-container">
                   <ul class="service-list">
-                     <li class="service-item item-current"><a class="active" href="#">Доставка</a></li>
-                     <li class="service-item"><a class="var" href="#">Гарантия</a></li>
-                     <li class="service-item"><a href="#">Кредит</a></li>
+                     <li class="service-item item-current"><a class="delivery active" href="#">Доставка</a></li>
+                     <li class="service-item"><a class="warranty" href="#">Гарантия</a></li>
+                     <li class="service-item"><a class="credit" href="#">Кредит</a></li>
                   </ul>
                   <ul class="services-slider">
                      <li class="slider-item-slide" id="delivery">
@@ -195,18 +195,18 @@
                            поднимая его на ваш этаж!
                         </p>
                      </li>
+                     <li class="slider-item-slide visually-hidden" id="garantee">
+                        <h3 class="header-color">Гарантия</h3>
+                        <p class="slide-paragraph-third">Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара,спровоцированного его возгоранием,<br>
+                           вы всегда можете быть уверенны в нашей гарантии! Мы обменяем<br> сгоревший товар на новый.<br>Дом уж востановите как-нибудь сами
+                        </p>
+                     </li>
                      <li class="slider-item-slide visually-hidden" id="credit">
                         <h3 class="header-color">Кредит</h3>
                         <p class="slide-paragraph-second">Залезть в долговую яму теперь стало проще!<br>
                            Кредитные консультанты придут вам на помощь.
                         </p>
                         <button class="button button-credit" type="submit">Отправить заявку</button>
-                     </li>
-                     <li class="slider-item-slide visually-hidden" id="garantee">
-                        <h3 class="header-color">Гарантия</h3>
-                        <p class="slide-paragraph-third">Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара,спровоцированного его возгоранием,<br>
-                           вы всегда можете быть уверенны в нашей гарантии! Мы обменяем<br> сгоревший товар на новый.<br>Дом уж востановите как-нибудь сами
-                        </p>
                      </li>
                   </ul>
                </div>
@@ -308,7 +308,7 @@
          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="form-input">
                <label for="guest-name">Ваше имя:</label>
-               <input class="name-input" id="guest-name" type="text" name="name" placeholder="Представьтесь пожалуйста">
+               <input class="name-input" id="guest-name" type="text" name="login" placeholder="Представьтесь пожалуйста">
             </p>
             <p class="form-input">
                <label for="guest-email">Ваш e-mail:</label> 
@@ -320,7 +320,7 @@
             </p>
             <button class="button button-send" type="submit">Отправить</button>
          </form>
-         <button class="modal-close">Закрыть</button>
+         <button class="modal-close message-close">Закрыть</button>
       </section>
       <section class="modal modal-map">
          <h2 class="visually-hidden">Как до нас добраться?</h2>
@@ -328,28 +328,146 @@
             <iframe class="i-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858715513438!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538919518850" width="943" height="449" style="border:0" allowfullscreen></iframe>
             <img src="img1/map-big.jpg" width="943" height="449" alt="Офис компании по адресу:г.Санкт-Петербург ул.Б.Конюшенная д.19/8">
          </p>
-         <button class="modal-close">Закрыть</button>
+         <button type="button" class="modal-close map-close">Закрыть</button>
       </section>
+      <section class="modal modal-cart">
+          <h2 class="visually-hidden">Товар добавлен в корзину</h2>
+          <p class="product-add">Товар добавлен в корзину!</p>
+          
+          <div class="buttons">
+              <a href="#" class="button button-checkout">Оформить заказ</a>
+              <button class="button-continue" type="button">Продолжить покупки</button>
+          </div>
+          
+          <button type="button" class="cart-close modal-close">Закрыть</button>
+       </section>
       
       <script>
         var link = document.querySelector(".button-write");
         var overlay = document.querySelector(".modal-overlay");
         var popup = document.querySelector(".modal-message");
-        var close = popup.querySelector(".modal-close");
-        var name = popup.querySelector("[name=name]");
+        var close = popup.querySelector(".message-close");
+        var login = popup.querySelector("[name=login]");
+        var form = popup.querySelector("form");
+        var email = popup.querySelector("[name=email]");
+        var mapMini = document.querySelector(".link-map");
+        var map = document.querySelector(".modal-map");
+        var closeMap = map.querySelector(".map-close");
+
         
+        var buy = document.querySelector(".buy");/*--------------Fix!-------------*/
+        var cartPopup = document.querySelector(".modal-cart");
+        var closeCart = cartPopup.querySelector(".cart-close");
+        var cont = cartPopup.querySelector(".button-continue");
+
+    
+        var warranty = document.querySelector(".warranty");
+        var delivery = document.querySelector(".delivery");
+        var credit = document.querySelector(".credit");
+        var slide1 = document.getElementById("delivery");
+        var slide2 = document.getElementById("garantee");
+        var slide3 = document.getElementById("credit");
+        
+        warranty.addEventListener("click", function(evt){
+            evt.preventDefault();
+            warranty.classList.add("active");
+            slide2.classList.remove("visually-hidden");
+            slide1.classList.add("visually-hidden");
+            slide3.classList.add("visually-hidden");
+            if(delivery.classList.contains("active")){
+              delivery.classList.remove("active");
+            }
+            else {
+              credit.classList.remove("active");
+            }
+          });
+
+          delivery.addEventListener("click", function(evt){
+            evt.preventDefault();
+            delivery.classList.add("active");
+            slide1.classList.remove("visually-hidden");
+            slide2.classList.add("visually-hidden");
+            slide3.classList.add("visually-hidden");
+            
+            if(warranty.classList.contains("active")){
+              warranty.classList.remove("active");
+            }
+            else {
+              credit.classList.remove("active");
+            }
+          });
+          credit.addEventListener("click", function(evt){
+            evt.preventDefault();
+            credit.classList.add("active");
+            slide3.classList.remove("visually-hidden");
+            slide2.classList.add("visually-hidden");
+            slide1.classList.add("visually-hidden");
+            if(warranty.classList.contains("active")){
+              warranty.classList.remove("active");
+            }
+            else {
+              delivery.classList.remove("active");
+            }
+          });
+
+          buy.addEventListener("click", function(evt){
+            evt.preventDefault();
+            cartPopup.classList.add("modal-show");
+            overlay.classList.add("modal-show");
+          });
+          closeCart.addEventListener("click", function(evt){
+            evt.preventDefault();
+            cartPopup.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+          });
+          cont.addEventListener("click", function(evt){
+            evt.preventDefault();
+            cartPopup.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+          });
+
+        mapMini.addEventListener("click", function(evt){
+          evt.preventDefault();
+          map.classList.add("modal-show");
+          overlay.classList.add("modal-show");
+        });
+        closeMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        map.classList.remove("modal-show");
+        overlay.classList.remove("modal-show");
+        });
 
         link.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
         overlay.classList.add("modal-show");
-        name.focus();
+        login.focus();
     });
   
         close.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
         overlay.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+    });
+        form.addEventListener("submit", function (evt) {
+        evt.preventDefault();
+        if (!login.value || !email.value) {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+        }
+    });
+        window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+          }
+        }
     });
        
        
