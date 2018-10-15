@@ -4,7 +4,7 @@
       <title>Магазин "Техномарт"</title>
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet">
+      <link href="css/styles.min.css" rel="stylesheet">
    </head>
    <body class="inner-page">
       <header class="main-header">
@@ -17,7 +17,7 @@
                      <input id="search-field-input" class="search-input" type="text" name="search" placeholder="Поиск">
                   </p>
                   <a class="top-menu-item tab" href="#">Закладки:0</a>
-                  <a class="top-menu-item cart-link" href="#">Корзина:<span class="counter">10</span></a>
+                  <a class="top-menu-item cart-link cart-red" href="#">Корзина:<span class="counter">10</span></a>
                   <a class="top-menu-item submit-order" href="#">Оформить заказ</a>
                </div>
             </div>
@@ -347,11 +347,14 @@
       <section class="modal modal-cart">
          <h2 class="visually-hidden">Товар добавлен в корзину</h2>
          <p class="product-add">Товар добавлен в корзину!</p>
+         
          <div class="buttons">
             <a href="#" class="button button-checkout">Оформить заказ</a>
             <button class="button-continue" type="button">Продолжить покупки</button>
          </div>
+         
          <button type="button" class="cart-close modal-close">Закрыть</button>
       </section>
+      <script src="js/script.cart.min.js"></script>
    </body>
 </html>

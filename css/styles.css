@@ -153,8 +153,6 @@ a {
 .top-menu-input {
 	float: left;
 	margin: 0;
-	margin-left: auto;
-	margin-right: 40px;
 }
 
 .search-input {
@@ -194,15 +192,15 @@ a {
 }
 
 .tab,
-.cart-link {
+.cart-link,
+.submit-order {
+	width:150px;
 	position: relative;
 	float: left;
 	margin: 0;
 }
 
-.tab {
-	margin-left: -40px;
-}
+
 
 .tab:before {
 	content: "";
@@ -250,21 +248,16 @@ input:-moz-placeholder {
 
 .top-menu a {
 	display: block;
-	height: 42px;
 	color: #ffffff;
 	font-family: Cuprum, Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 400;
 	line-height: 18px;
-	padding: 12px 40px;
-	padding-left: 40px;
+	padding: 12px 30px;
+	padding-left: 50px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	background-color: #293449;
-}
-
-.cart-link {
-	padding-right: 41px;
 }
 
 .top-menu a:hover,
@@ -535,9 +528,6 @@ input:-moz-placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-.inner-page .cart-link {
-	background-color: #ee3643;
-}
 
 .user-link,
 .orders-link {
@@ -876,7 +866,7 @@ input:-moz-placeholder {
 	position: absolute;
 	top: 0;
 	left: 20px;
-	;
+	
 	width: 6px;
 	height: 6px;
 	background-color: #ee3643;
@@ -2556,6 +2546,9 @@ input[type="radio"]:checked:disabled+label::after {
 	display: block;
 }
 
+.top-menu .cart-red {
+	background-color: #ee3643;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

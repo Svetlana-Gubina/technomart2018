@@ -4,7 +4,7 @@
       <title>Магазин "Техномарт"</title>
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet">
+      <link href="css/styles.min.css" rel="stylesheet">
    </head>
    <body class="home-page">
       <header class="main-header">
@@ -78,12 +78,12 @@
                   <input type="radio" id="btn-2" name="toggle">
                   <div class="slider-inner">
                      <div class="slider-slides">
-                        <div class="slider-item">
+                        <div class="slider-item slide-1">
                            <b>Дрели</b>
                            <p>Cоседям на радость!</p>
                            <img src="img1/bosch-top-img.jpg" width="620" height="266" alt="Мужчина,работающий с дрелью.">
                         </div>
-                        <div class="slider-item">
+                        <div class="slider-item slide-2">
                            <b>Перфораторы</b>
                            <p>настоящие мужские игрушки</p>
                            <img src="img1/perf-top-img.jpg" width="620" height="260" alt="Мужчина,работающий с перфоратором">
@@ -91,12 +91,12 @@
                      </div>
                   </div>
                   <div class="slider-controls">
-                     <label for="btn-1"></label>
-                     <label for="btn-2"></label>
+                     <label class="arrow-1" for="btn-1"></label>
+                     <label class="arrow-2" for="btn-2"></label>
                   </div>
                   <div class="slider-indicators">
-                     <span class="slider-indicator"></span>
-                     <span class="slider-indicator  indicator-current"></span> 
+                     <span class="ind-1 slider-indicator"></span>
+                     <span class="ind-2 slider-indicator  indicator-current"></span> 
                   </div>
                   <a class="button btn-open" href="inner.html">Открыть каталог</a>
                </div>
@@ -341,136 +341,7 @@
           
           <button type="button" class="cart-close modal-close">Закрыть</button>
        </section>
-      
-      <script>
-        var link = document.querySelector(".button-write");
-        var overlay = document.querySelector(".modal-overlay");
-        var popup = document.querySelector(".modal-message");
-        var close = popup.querySelector(".message-close");
-        var login = popup.querySelector("[name=login]");
-        var form = popup.querySelector("form");
-        var email = popup.querySelector("[name=email]");
-        var mapMini = document.querySelector(".link-map");
-        var map = document.querySelector(".modal-map");
-        var closeMap = map.querySelector(".map-close");
-
-        
-        var buy = document.querySelector(".buy");/*--------------Fix!-------------*/
-        var cartPopup = document.querySelector(".modal-cart");
-        var closeCart = cartPopup.querySelector(".cart-close");
-        var cont = cartPopup.querySelector(".button-continue");
-
-    
-        var warranty = document.querySelector(".warranty");
-        var delivery = document.querySelector(".delivery");
-        var credit = document.querySelector(".credit");
-        var slide1 = document.getElementById("delivery");
-        var slide2 = document.getElementById("garantee");
-        var slide3 = document.getElementById("credit");
-        
-        warranty.addEventListener("click", function(evt){
-            evt.preventDefault();
-            warranty.classList.add("active");
-            slide2.classList.remove("visually-hidden");
-            slide1.classList.add("visually-hidden");
-            slide3.classList.add("visually-hidden");
-            if(delivery.classList.contains("active")){
-              delivery.classList.remove("active");
-            }
-            else {
-              credit.classList.remove("active");
-            }
-          });
-
-          delivery.addEventListener("click", function(evt){
-            evt.preventDefault();
-            delivery.classList.add("active");
-            slide1.classList.remove("visually-hidden");
-            slide2.classList.add("visually-hidden");
-            slide3.classList.add("visually-hidden");
-            
-            if(warranty.classList.contains("active")){
-              warranty.classList.remove("active");
-            }
-            else {
-              credit.classList.remove("active");
-            }
-          });
-          credit.addEventListener("click", function(evt){
-            evt.preventDefault();
-            credit.classList.add("active");
-            slide3.classList.remove("visually-hidden");
-            slide2.classList.add("visually-hidden");
-            slide1.classList.add("visually-hidden");
-            if(warranty.classList.contains("active")){
-              warranty.classList.remove("active");
-            }
-            else {
-              delivery.classList.remove("active");
-            }
-          });
-
-          buy.addEventListener("click", function(evt){
-            evt.preventDefault();
-            cartPopup.classList.add("modal-show");
-            overlay.classList.add("modal-show");
-          });
-          closeCart.addEventListener("click", function(evt){
-            evt.preventDefault();
-            cartPopup.classList.remove("modal-show");
-            overlay.classList.remove("modal-show");
-          });
-          cont.addEventListener("click", function(evt){
-            evt.preventDefault();
-            cartPopup.classList.remove("modal-show");
-            overlay.classList.remove("modal-show");
-          });
-
-        mapMini.addEventListener("click", function(evt){
-          evt.preventDefault();
-          map.classList.add("modal-show");
-          overlay.classList.add("modal-show");
-        });
-        closeMap.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        map.classList.remove("modal-show");
-        overlay.classList.remove("modal-show");
-        });
-
-        link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        overlay.classList.add("modal-show");
-        login.focus();
-    });
-  
-        close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        overlay.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-    });
-        form.addEventListener("submit", function (evt) {
-        evt.preventDefault();
-        if (!login.value || !email.value) {
-        evt.preventDefault();
-        popup.classList.remove("modal-error");
-        popup.offsetWidth = popup.offsetWidth;
-        popup.classList.add("modal-error");
-        }
-    });
-        window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-            overlay.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-    });
-       
-       
-      </script>
+       <script src="js/script.min.js"></script>
+       <script src="js/script.cart.min.js"></script>
    </body>
 </html>
