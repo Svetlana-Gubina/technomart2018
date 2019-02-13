@@ -8,7 +8,7 @@
 	var slide3 = document.getElementById("credit");
 
 	// Сервисы
-
+	
 	warranty.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		warranty.classList.add("active");
