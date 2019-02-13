@@ -207,7 +207,6 @@ a {
 	position: absolute;
 	top: 12px;
 	left: 10px;
-	;
 	width: 14px;
 	height: 16px;
 	background-image: url("../img1/icon-bookmark.png");
@@ -267,7 +266,6 @@ input:-moz-placeholder {
 
 .top-menu a:active {
 	color: rgba(255, 255, 255, 0.51);
-	background-color: #161d29;
 }
 
 .top-menu a:last-child {
@@ -1156,21 +1154,21 @@ input:-moz-placeholder {
 }
 
 .slider-item-slide:first-child {
-	background-image: url("../img1/track.png"), url("../img/layer-121.png");
-	background-position: 100% 20%, 100% 100%;
-	background-repeat: no-repeat, no-repeat;
+	background-image: url("../img1/lorry.png");
+	background-position: 100% 20%;
+	background-repeat: no-repeat;
 }
 
 .slider-item-slide:nth-child(2) {
-	background-image: url("../img1/credit.png"), url("../img1/credit-shadow.png");
-	background-position: 100% 0, 100% 0;
-	background-repeat: no-repeat, no-repeat;
+	background-image: url("../img1/credit.png");
+	background-position: 100% 0;
+	background-repeat: no-repeat;
 }
 
 .slider-item-slide:nth-child(3) {
-	background-image: url("../img1/garantie.png"), url("../img1/garant-shadow.png");
-	background-position: 100% 0, 100% 0;
-	background-repeat: no-repeat, no-repeat;
+	background-image: url("../img1/varranty.png");
+	background-position: 100% 0;
+	background-repeat: no-repeat;
 }
 
 .about-us-container {

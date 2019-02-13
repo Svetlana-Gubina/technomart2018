@@ -4,7 +4,7 @@
       <title>Магазин "Техномарт"</title>
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/styles.min.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
    </head>
    <body class="home-page">
       <header class="main-header">
@@ -16,8 +16,8 @@
                      <label for="search-field-input" class="visually-hidden">Поиск по сайту</label>
                      <input id="search-field-input" class="search-input" type="text" name="search" placeholder="Поиск">
                   </form>
-                  <a class="top-menu-item tab" href="#">Закладки:<span class="counter">0</span></a>
-                  <a class="top-menu-item cart-link" href="#">Корзина:<span class="counter">0</span></a>
+                  <a class="top-menu-item tab" href="#">Закладки:<span class="counter-mark">0</span></a>
+                  <a class="top-menu-item cart-link" href="#">Корзина:<span class="counter-cart">0</span></a>
                   <a class="top-menu-item submit-order" href="#">Оформить заказ</a>
                </div>
             </div>
@@ -112,10 +112,6 @@
                 <div class="cat-container">
                   <article class="catalog-item">
                      <h3 class="visually-hidden">Перфоратор bosch BFG 9000</h3>
-                     <div class="actions">
-                        <a href="#" class="buy">Купить</a>
-                        <a href="#" class="bookmark">В закладки</a>
-                     </div>
                      <div class="product-image perf-image-big"><img src="img1/perf-3.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></div>
                      <div class="title">Перфоратор BOSCH BFG 9000</div>
                      <div class="discount">32500 р.</div>
@@ -123,10 +119,6 @@
                   </article>
                   <article class="catalog-item">
                      <h3 class="visually-hidden">Перфоратор bosch BFG 3000</h3>
-                     <div class="actions">
-                        <a href="#" class="buy">Купить</a>
-                        <a href="#" class="bookmark">В закладки</a>
-                     </div>
                      <div class="product-image perf-image-small"><img src="img1/perf-1.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
                      <div class="title">Перфоратор BOSCH BFG 3000</div>
                      <div class="discount">22500 p.</div>
@@ -134,10 +126,6 @@
                   </article>
                   <article class="catalog-item">
                      <h3 class="visually-hidden">Перфоратор bosch BFG 6000</h3>
-                     <div class="actions">
-                        <a href="#" class="buy">Купить</a>
-                        <a href="#" class="bookmark">В закладки</a>
-                     </div>
                      <div class="product-image perf-image-standart"><img src="img1/perf-2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
                      <div class="title">Перфоратор BOSCH BFG 6000</div>
                      <div class="discount">30500 p.</div>
@@ -146,10 +134,6 @@
                   <article class="catalog-item">
                      <h3 class="visually-hidden">Перфоратор bosch BFG 2000</h3>
                      <div class="flag flag-new">новинка</div>
-                     <div class="actions">
-                        <a href="#" class="buy">Купить</a>
-                        <a href="#" class="bookmark">В закладки</a>
-                     </div>
                      <div class="product-image perf-image-small"><img src="img1/perf-1.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
                      <div class="title">Перфоратор BOSCH BFG 2000</div>
                      <div class="price-label only-label">12500 p.</div>
@@ -261,6 +245,13 @@
                </div>
             </div>
          </div>
+         <!-- Шаблон - ryопки "Купить" и "В закладки" -->
+         <template id="actions">
+            <div class="actions">
+               <a href="#" class="buy">Купить</a>
+               <a href="#" class="bookmark">В закладки</a>
+            </div>
+         </template>
          <div class="footer-social">
             <div class="container-joint">
                <p class="copyright">©2010-2017 Компания "Техномарт"<br> 
@@ -341,7 +332,9 @@
           
           <button type="button" class="cart-close modal-close">Закрыть</button>
        </section>
-       <script src="js/script.min.js"></script>
-       <script src="js/script.cart.min.js"></script>
+       <script src="js/cart.min.js"></script>
+       <script src="js/modal.min.js"></script>
+       <script src="js/template.min.js"></script>
+       <script src="js/services.min.js"></script>
    </body>
 </html>
